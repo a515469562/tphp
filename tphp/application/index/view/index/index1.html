@@ -1,0 +1,29 @@
+{//__NOLAYOUT__}
+对模板输出变量使用函数<br/>
+
+{literal}
+	{$name}<br/>
+{/literal}
+<!-- 可以使用literal标签进行原样输出 -->
+
+{layout name='lang' /}
+
+{/*$Think.server.server_name*/}<br/>//模板注释
+{$Think.APP_PA}<br/>
+{$name|strtoupper|substr=0,3}<br/>
+<!-- 使用多个函数用|隔开 -->
+
+{$time|date='y-m-d h:m:s',###}<br/>
+<!-- 表示date函数传入两个参数，###代表$time -->
+ 
+
+{extend name='base'/}
+
+{block name='head'}{__block__}
+<!-- 合并继承和重载的区块内容 -->
+		<div style="height: 100px; weight:100%; background-color: red">这是子模板的头部信息</div>
+	{/block}
+	{block name='footer'}{__block__}
+		<div style="height: 100px; weight:100%; background-color: yellow">这是子模板的底部信息</div>
+	{/block}
+	<!-- 注意block外的信息是不会显示 -->

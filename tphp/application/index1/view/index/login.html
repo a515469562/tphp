@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<body>
+  
+        
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="bold">&nbsp;&nbsp;登录休闲网</td>
+                            
+                        </tr>
+                        <form action="check" method="post" >
+                            <tr>
+                                <td>用户名：<input id="username" name="name" type="text"  placeholder="请填写用户名" /></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;密码：<input id="psd" name="password" type="password"  placeholder="请填写密码"/></td>
+                            </tr>
+                            <tr>
+                            	<td>验证码：	<input type="text" name="code" placeholder="请填写右侧的验证码" data-validate="required:请填写右侧的验证码"/>
+                            		<img src="{:captcha_src()}" alt="capcha" class="passcode" style="height: 35px;cursor:pointer;" onclick="this.src=this.src+'?'"></td>
+                            </tr>
+                            <tr>
+                            	<td><input  id="btn" type="submit" value="提交"   /></td>
+                            </tr>
+                        </form>
+                    </table>
+              
+        
+    
+</body>
+</body>
+</html>

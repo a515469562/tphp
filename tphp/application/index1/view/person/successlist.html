@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>休闲网登录页面</title>
+</head>
+<body>
+<div   >
+<table border="1">
+	<tr><td><a href="{:url('index1/Index/logout')}">退出登录</a></td>
+		 
+	</tr>
+	<tr>
+		<th>ID</th>
+		<th>用户名</th>
+		<th>密码</th>
+		<th>邮箱</th>
+		<th>创建时间</th>
+		
+	</tr>
+	{foreach $data as $value}
+	<tr>
+		<td>{$value.id}</td>
+		<td>{$value.name}</td>
+		<td>{$value.password}</td>
+		<td>{$value.email}</td>
+		<td>{$value.create_time}</td>
+		 
+	</tr>
+	{/foreach}
+</table>
+	<div align="center">{$page}</div>
+</div>
+</body>
+</html>
+
+</body>
+</html>

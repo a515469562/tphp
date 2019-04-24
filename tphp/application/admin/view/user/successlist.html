@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>休闲网登录页面</title>
+</head>
+<body>
+<div   >
+<table border="1">
+	<tr><td><a href="{:url('admin/Index/logout')}">退出登录</a></td>
+		<td><a href="add">添加管理员</a></td>
+	</tr>
+	<tr>
+		<th>ID</th>
+		<th>用户名</th>
+		<th>密码</th>
+		<th>邮箱</th>
+		<th>创建时间</th>
+		
+	</tr>
+	{foreach $data as $value}
+	<tr>
+		<td>{$value.id}</td>
+		<td>{$value.name}</td>
+		<td>{$value.password}</td>
+		<td>{$value.email}</td>
+		<td>{$value.create_time}</td>
+		<td><div class="button_group">
+			<a class="button border-main" href="edit?id={$value.id}"><span class="icon-edit"></span>修改</a>
+			<a class="button border-red" href="delete?id={$value.id}"><span class="icon-trash-o"></span>删除</a>
+		</div></td>
+	</tr>
+	{/foreach}
+</table>
+	<div align="center">{$page}</div>
+</div>
+</body>
+</html>

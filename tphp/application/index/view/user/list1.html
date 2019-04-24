@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户列表</title>
+</head>
+<body>
+	模板的内置标签<hr/>
+
+	{volist name='list' id='vo' offset='1' length='2'}
+		{$vo.id}===>{$vo.name}<br/>
+	{/volist}
+	<hr/>
+	{foreach $list as $vo}
+		{$vo.id}:{$vo.name}<br/>
+	{/foreach}
+
+	<hr/>
+	{for start='1' end='10'}
+		{$i}<br/>
+	{/for}
+	<hr/>
+	{php}echo 'hello world';{/php}
+	<hr/>
+	<?php echo '不推荐使用原生php代码标签，推荐使用php标签 '?>
+</body>
+</html>
